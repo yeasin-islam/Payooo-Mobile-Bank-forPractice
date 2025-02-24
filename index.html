@@ -23,39 +23,35 @@
   </style>
 </head>
 
-<body>
-  <div class="text-center m-16 container w-auto">
-    <h1 class="font-bold text-9xl text-cyan-400 text-center h-full p-16 rounded-3xl mt-20  bg-red-600">Hello Sir</h1>
-  </div>
-  <section>
-    <div class="hero min-h-screen">
-      <div class="hero-content flex-col lg:flex-row-reverse">
-        <div class="text-center lg:text-left">
-          <h1 class="text-5xl font-bold">Login now!</h1>
-          <p class="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-            quasi. In deleniti eaque aut repudiandae et a id nisi.
-          </p>
+<body class="bg-slate-800">
+  <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+    <header>
+      <nav class="flex justify-center items-center mt-6">
+        <div class="mt-10 relative flex justify-center items-center w-9/12">
+          <img class="w-48 absolute" src="./Assest/Rectangle 1.png" alt="">
+          <img class="w-16" src="./Assest/Group.png" alt="">
         </div>
+      </nav>
+    </header>
+    <!-- login section  -->
+    <div class="">
+      <div class="hero-content flex-col lg:flex-row-reverse">
         <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-          <div class="card-body">
+          <form class="card-body">
             <fieldset class="fieldset">
-              <label class="fieldset-label">Email</label>
-              <input type="email" class="input" placeholder="Email" />
-              <label class="fieldset-label">Password</label>
-              <input type="password" class="input" placeholder="Password" />
+              <label class="fieldset-label">Account Number</label>
+              <input value="01318181198" id="Account-Number" type="number" maxlength="11" class="input" placeholder="Enter Your Account Number" required/>
+              <label class="fieldset-label">PIN</label>
+              <input value="1234" id="Pin" type="text" class="input" placeholder="Enter Your PIN" required/>
               <div><a class="link link-hover">Forgot password?</a></div>
-              <button class="btn btn-neutral mt-4">Login</button>
+              <button id="login-btn" class="btn bg-black text-white mt-4">Login</button>
             </fieldset>
-          </div>
+          </form>
         </div>
       </div>
     </div>
   </section>
-  <section></section>
-  <section></section>
-  <section></section>
-  <script src="./first.js"></script>
+  <script src="./script/login.js"></script>
 </body>
 
 </html>
