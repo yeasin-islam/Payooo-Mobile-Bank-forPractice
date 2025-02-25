@@ -60,7 +60,7 @@
                     <h4>Pay Bill</h4>
                 </div>
                 <!-- 6th -->
-                <div id="transactions-box" class="box cursor-pointer border rounded-sm text-center p-4">
+                <div id="transactions-mini-box" class="box cursor-pointer border rounded-sm text-center p-4">
                     <img class="w-8 mx-auto" src="./Assest/Main Page/Transactions.png" alt="">
                     <h4>Transactions</h4>
                 </div>
@@ -125,7 +125,7 @@
                         <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
                             <form class="card-body">
                                 <legend>Select Bank</legend>
-                                <select class="select rounded-full">
+                                <select id="allBank" class="select rounded-full">
                                     <option disabled selected>Select Your Bank</option>
                                     <option value="bkash">Bkash</option>
                                     <option value="nagad">Nagad</option>
@@ -157,10 +157,10 @@
                             <form class="card-body">
                                 <fieldset class="fieldset">
                                     <label class="fieldset-label">Agent Number</label>
-                                    <input value="01318181198" id="Account-Number" type="number" maxlength="11"
+                                    <input value="01318181198" id="Agent-Number" type="number" maxlength="11"
                                         class="input rounded-full" placeholder="Enter 11 digit Number" required />
                                     <label class="fieldset-label">Amount</label>
-                                    <input id="cashoutAmount" value="5000" type="text" class="input rounded-full"
+                                    <input id="cashoutAmount" value="500" type="text" class="input rounded-full"
                                         placeholder="Enter amount to withdrow" required />
                                     <label class="fieldset-label">PIN</label>
                                     <input value="1234" id="Pin" type="text" class="input rounded-full"
@@ -184,7 +184,7 @@
                                     <input value="01318181198" id="Account-Number" type="number" maxlength="11"
                                         class="input rounded-full" placeholder="Enter 11 digit Number" required />
                                     <label class="fieldset-label">Amount</label>
-                                    <input value="5000" id="transferAmount" type="text" class="input rounded-full"
+                                    <input value="500" id="transferAmount" type="text" class="input rounded-full"
                                         placeholder="Enter amount to withdrow" required />
                                     <label class="fieldset-label">Pin number</label>
                                     <input value="1234" id="Pin" type="text" class="input rounded-full"
@@ -220,8 +220,15 @@
                     <div class="hero-content flex-col lg:flex-row-reverse">
                         <div class="card w-full max-w-sm shrink-0 shadow-2xl">
                             <form class="card-body">
+                                <legend>Select Pay Billing Type</legend>
+                                <select id="allBillingType" class="select rounded-full">
+                                    <option disabled selected>Select Your Billing Type</option>
+                                    <option value="Current Bill">Current Bill</option>
+                                    <option value="Gass Bill">Gass Bill</option>
+                                    <option value="Water Bill">Water Bill</option>
+                                </select>
                                 <legend>Select Bank</legend>
-                                <select class="select rounded-full">
+                                <select id="allBank" class="select rounded-full">
                                     <option disabled selected>Select Your Bank</option>
                                     <option value="bkash">Bkash</option>
                                     <option value="nagad">Nagad</option>
@@ -245,78 +252,30 @@
                     </div>
                 </section>
                 <!-- Transactions Section  -->
-                <section id="transections-form" class="p-6">
+                <section id="transactions-box" class="p-6">
                     <div class="flex justify-between items-center pb-6">
                         <h3 class="font-bold text-2xl">Transections History</h3>
                         <button class="btn">View All</button>
                     </div>
 
-                    <div class="space-y-5 px-6">
-                        <div class="cards flex justify-between items-center border rounded-md p-4 h-16">
+                    <div id="transaction-cards-container" class="space-y-5 px-6">
+                        <div class="cards flex justify-between items-center border rounded-md p-4">
                             <div class="flex justify-start items-center gap-4">
                                 <img class="w-8 h-8" src="./Assest/Main Page/PayBill.png" alt="">
                                 <div>
-                                    <h3 class="font-semibold text-lg">Electricity Bill</h3>
+                                    <h3 class="font-semibold text-lg">1. Added Money From Bkash</h3>
+                                    <h3>Amount 5000</h3>
+                                    <p>Account number 01318181198</p>  
                                     <p>Today 01:44 AM</p>
                                 </div>
                             </div>
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
-                        <div class="cards flex justify-between items-center border rounded-md p-4 h-16">
-                            <div class="flex justify-start items-center gap-4">
-                                <img class="w-8 h-8" src="./Assest/Main Page/PayBill.png" alt="">
-                                <div>
-                                    <h3 class="font-semibold text-lg">Bank Deposit</h3>
-                                    <p>Today 01:44 AM</p>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </div>
-                        <div class="cards flex justify-between items-center border rounded-md p-4 h-16">
-                            <div class="flex justify-start items-center gap-4">
-                                <img class="w-8 h-8" src="./Assest/Main Page/PayBill.png" alt="">
-                                <div>
-                                    <h3 class="font-semibold text-lg">Mobile Recharge</h3>
-                                    <p>Today 01:44 AM</p>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </div>
-                        <div class="cards flex justify-between items-center border rounded-md p-4 h-16">
-                            <div class="flex justify-start items-center gap-4">
-                                <img class="w-8 h-8" src="./Assest/Main Page/PayBill.png" alt="">
-                                <div>
-                                    <h3 class="font-semibold text-lg">Gas Bill</h3>
-                                    <p>Today 01:44 AM</p>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </div>
-                        <div class="cards flex justify-between items-center border rounded-md p-4 h-16">
-                            <div class="flex justify-start items-center gap-4">
-                                <img class="w-8 h-8" src="./Assest/Main Page/PayBill.png" alt="">
-                                <div>
-                                    <h3 class="font-semibold text-lg">Gas Bill</h3>
-                                    <p>Today 01:44 AM</p>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </div>
-                        <div class="cards flex justify-between items-center border rounded-md p-4 h-16">
-                            <div class="flex justify-start items-center gap-4">
-                                <img class="w-8 h-8" src="./Assest/Main Page/PayBill.png" alt="">
-                                <div>
-                                    <h3 class="font-semibold text-lg">Gas Bill</h3>
-                                    <p>Today 01:44 AM</p>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </div>
-                    </div>
                 </section>
         </section>
         </div>
     </section>
+    <script src="./Utilities/utilities.js"></script>
     <script src="./script/addMoney.js"></script>
     <script src="./script/cashout.js"></script>
     <script src="./script/transferMoney.js"></script>
