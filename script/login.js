@@ -9,7 +9,7 @@ document.getElementById("login-btn").addEventListener("click",
         if (accountNumber.length === 11) {
 
             if (convertedPin === 1234) {
-                window.location.href="./AddMoney.html"
+                window.location.href="./main.html"
             }
             else {
                 alert("pin thik nai")
