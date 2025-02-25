@@ -24,7 +24,7 @@
                     <p class="border rounded-lg p-1">Available Balance</p>
                 </div>
             </div>
-            <button class="btn bg-none text-black font-normal rounded-lg ">LogOut <i
+            <button id="logout-btn" class="btn bg-none text-black font-normal rounded-lg ">LogOut <i
                     class="fa-solid text-black fa-arrow-right-from-bracket"></i></button>
         </nav>
         <main class="container mx-auto p-6">
@@ -117,203 +117,211 @@
                     </div>
                 </div>
             </section>
-            <!-- Add Money Section  -->
-            <section id="add-money-form" class="p-6">
-                <h1 class="font-bold text-2xl">Add Money</h1>
-                <div class="hero-content flex-col lg:flex-row-reverse">
-                    <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
-                        <form class="card-body">
-                            <legend>Select Bank</legend>
-                            <select class="select rounded-full">
-                                <option disabled selected>Select Your Bank</option>
-                                <option value="bkash">Bkash</option>
-                                <option value="nagad">Nagad</option>
-                                <option value="dbbl">DBBL</option>
-                            </select>
-                            <fieldset class="fieldset">
-                                <label class="fieldset-label">Bank Account Number</label>
-                                <input value="01318181198" id="Account-Number" type="number" maxlength="11"
-                                    class="input rounded-full" placeholder="Enter Your Account Number" required />
-                                <label class="fieldset-label">Amount To Add</label>
-                                <input id="addAmount" value="5000" type="text" class="input rounded-full"
-                                    placeholder="Add amount to withdrow" required />
+            <div id="hidden-form">
+                <!-- Add Money Section  -->
+                <section id="add-money-form" class="p-6">
+                    <h1 class="font-bold text-2xl">Add Money</h1>
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                        <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
+                            <form class="card-body">
+                                <legend>Select Bank</legend>
+                                <select class="select rounded-full">
+                                    <option disabled selected>Select Your Bank</option>
+                                    <option value="bkash">Bkash</option>
+                                    <option value="nagad">Nagad</option>
+                                    <option value="dbbl">DBBL</option>
+                                </select>
+                                <fieldset class="fieldset">
+                                    <label class="fieldset-label">Bank Account Number</label>
+                                    <input value="01318181198" id="Account-Number" type="number" maxlength="11"
+                                        class="input rounded-full" placeholder="Enter Your Account Number" required />
+                                    <label class="fieldset-label">Amount To Add</label>
+                                    <input id="addAmount" value="5000" type="text" class="input rounded-full"
+                                        placeholder="Add amount to withdrow" required />
 
-                                <label class="fieldset-label">PIN Number</label>
-                                <input value="1234" id="pin" type="text" class="input rounded-full"
-                                    placeholder="Enter 4 digit pin number" required />
-                                <button id="add-money" class="btn rounded-full bg-blue-700 text-white mt-4">Add
-                                    Money</button>
-                            </fieldset>
-                        </form>
+                                    <label class="fieldset-label">PIN Number</label>
+                                    <input value="1234" id="pin" type="text" class="input rounded-full"
+                                        placeholder="Enter 4 digit pin number" required />
+                                    <button id="add-money-btn" class="btn rounded-full bg-blue-700 text-white mt-4">Add
+                                        Money</button>
+                                </fieldset>
+                            </form>
+                        </div>
                     </div>
-                </div>
-            </section>
-            <!-- Cash out Section -->
-            <section id="cash-out-form" class="p-6">
-                <h1 class="font-bold text-2xl">Cash Out</h1>
-                <div class="hero-content flex-col lg:flex-row-reverse">
-                    <div class="card w-full max-w-sm shrink-0 shadow-2xl">
-                        <form class="card-body">
-                            <fieldset class="fieldset">
-                                <label class="fieldset-label">Agent Number</label>
-                                <input value="01318181198" id="Account-Number" type="number" maxlength="11"
-                                    class="input rounded-full" placeholder="Enter 11 digit Number" required />
-                                <label class="fieldset-label">Amount</label>
-                                <input id="addAmount" value="5000" type="text" class="input rounded-full"
-                                    placeholder="Enter amount to withdrow" required />
-                                <label class="fieldset-label">PIN</label>
-                                <input value="1234" id="Pin" type="text" class="input rounded-full"
-                                    placeholder="Enter 4 digit pin number" required />
-                                <button id="login-btn" class="btn rounded-full bg-blue-700 text-white mt-4">Withdraw
-                                    Money</button>
-                            </fieldset>
-                        </form>
+                </section>
+                <!-- Cash out Section -->
+                <section id="cash-out-form" class="p-6">
+                    <h1 class="font-bold text-2xl">Cash Out</h1>
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                        <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                            <form class="card-body">
+                                <fieldset class="fieldset">
+                                    <label class="fieldset-label">Agent Number</label>
+                                    <input value="01318181198" id="Account-Number" type="number" maxlength="11"
+                                        class="input rounded-full" placeholder="Enter 11 digit Number" required />
+                                    <label class="fieldset-label">Amount</label>
+                                    <input id="cashoutAmount" value="5000" type="text" class="input rounded-full"
+                                        placeholder="Enter amount to withdrow" required />
+                                    <label class="fieldset-label">PIN</label>
+                                    <input value="1234" id="Pin" type="text" class="input rounded-full"
+                                        placeholder="Enter 4 digit pin number" required />
+                                    <button id="cashout-btn"
+                                        class="btn rounded-full bg-blue-700 text-white mt-4">Withdraw
+                                        Money</button>
+                                </fieldset>
+                            </form>
+                        </div>
                     </div>
-                </div>
-            </section>
-            <!-- Transfer Money Section  -->
-            <section id="transfer-money-form" class="p-6">
-                <h1 class="font-bold text-2xl">Transfer Money</h1>
-                <div class="hero-content flex-col lg:flex-row-reverse">
-                    <div class="card w-full max-w-sm shrink-0 shadow-2xl">
-                        <form class="card-body">
-                            <fieldset class="fieldset">
-                                <label class="fieldset-label">User Account number</label>
-                                <input id="Account-Number" type="number" maxlength="11" class="input rounded-full"
-                                    placeholder="Enter 11 digit Number" required />
-                                <label class="fieldset-label">Amount</label>
-                                <input id="addAmount" type="text" class="input rounded-full"
-                                    placeholder="Enter amount to withdrow" required />
-                                <label class="fieldset-label">Pin number</label>
-                                <input id="Pin" type="text" class="input rounded-full"
-                                    placeholder="Enter 4 digit pin number" required />
-                                <button id="login-btn" class="btn rounded-full bg-blue-700 text-white mt-4">Withdraw
-                                    Money</button>
-                            </fieldset>
-                        </form>
+                </section>
+                <!-- Transfer Money Section  -->
+                <section id="transfer-money-form" class="p-6">
+                    <h1 class="font-bold text-2xl">Transfer Money</h1>
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                        <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                            <form class="card-body">
+                                <fieldset class="fieldset">
+                                    <label class="fieldset-label">User Account number</label>
+                                    <input value="01318181198" id="Account-Number" type="number" maxlength="11"
+                                        class="input rounded-full" placeholder="Enter 11 digit Number" required />
+                                    <label class="fieldset-label">Amount</label>
+                                    <input value="5000" id="transferAmount" type="text" class="input rounded-full"
+                                        placeholder="Enter amount to withdrow" required />
+                                    <label class="fieldset-label">Pin number</label>
+                                    <input value="1234" id="Pin" type="text" class="input rounded-full"
+                                        placeholder="Enter 4 digit pin number" required />
+                                    <button id="transfer-money-btn"
+                                        class="btn rounded-full bg-blue-700 text-white mt-4">Withdraw
+                                        Money</button>
+                                </fieldset>
+                            </form>
+                        </div>
                     </div>
-                </div>
-            </section>
-            <!-- Get Bonus Section  -->
-            <section id="get-bonus-form" class="p-6">
-                <h1 class="font-bold text-2xl">Get Bonus</h1>
-                <div class="hero-content flex-col lg:flex-row-reverse">
-                    <div class="card w-full max-w-sm shrink-0 shadow-2xl">
-                        <form class="card-body">
-                            <fieldset class="fieldset">
-                                <label class="fieldset-label">Enter Bonus Coupon</label>
-                                <input id="Pin" type="text" class="input rounded-full" placeholder="Enter your coupon"
-                                    required />
-                                <button id="login-btn" class="btn rounded-full bg-blue-700 text-white mt-4">Get
-                                    Bonus</button>
-                            </fieldset>
-                        </form>
+                </section>
+                <!-- Get Bonus Section  -->
+                <section id="get-bonus-form" class="p-6">
+                    <h1 class="font-bold text-2xl">Get Bonus</h1>
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                        <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                            <form class="card-body">
+                                <fieldset class="fieldset">
+                                    <label class="fieldset-label">Enter Bonus Coupon Number</label>
+                                    <input id="bonus-coupon-number" type="text" class="input rounded-full"
+                                        placeholder="Enter your coupon" required />
+                                    <button id="get-bonus-btn" class="btn rounded-full bg-blue-700 text-white mt-4">Get
+                                        Bonus</button>
+                                </fieldset>
+                            </form>
+                        </div>
                     </div>
-                </div>
-            </section>
-            <!-- Pay Bill Section  -->
-            <section id="pay-bill-form" class="p-6">
-                <h1 class="font-bold text-2xl">Pay Bill</h1>
-                <div class="hero-content flex-col lg:flex-row-reverse">
-                    <div class="card w-full max-w-sm shrink-0 shadow-2xl">
-                        <form class="card-body">
-                            <legend>Select Bank</legend>
-                            <select class="select rounded-full">
-                                <option disabled selected>Select Your Bank</option>
-                                <option value="bkash">Bkash</option>
-                                <option value="nagad">Nagad</option>
-                                <option value="dbbl">DBBL</option>
-                            </select>
-                            <fieldset class="fieldset">
-                                <label class="fieldset-label">Biller Account Number</label>
-                                <input id="Account-Number" type="number" maxlength="11" class="input rounded-full"
-                                    placeholder="Enter account number" required />
-                                <label class="fieldset-label">Amount to Pay</label>
-                                <input id="addAmount" type="text" class="input rounded-full"
-                                    placeholder="Add Amount to pay" required />
-                                <label class="fieldset-label">Pin number</label>
-                                <input id="Pin" type="text" class="input rounded-full"
-                                    placeholder="Enter 4 digit pin number" required />
-                                <button id="login-btn" class="btn rounded-full bg-blue-700 text-white mt-4">Pay
-                                    Now</button>
-                            </fieldset>
-                        </form>
+                </section>
+                <!-- Pay Bill Section  -->
+                <section id="pay-bill-form" class="p-6">
+                    <h1 class="font-bold text-2xl">Pay Bill</h1>
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                        <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                            <form class="card-body">
+                                <legend>Select Bank</legend>
+                                <select class="select rounded-full">
+                                    <option disabled selected>Select Your Bank</option>
+                                    <option value="bkash">Bkash</option>
+                                    <option value="nagad">Nagad</option>
+                                    <option value="dbbl">DBBL</option>
+                                </select>
+                                <fieldset class="fieldset">
+                                    <label class="fieldset-label">Biller Account Number</label>
+                                    <input id="Account-Number" type="number" maxlength="11" class="input rounded-full"
+                                        placeholder="Enter account number" required />
+                                    <label class="fieldset-label">Amount to Pay</label>
+                                    <input id="payBillAmount" type="text" class="input rounded-full"
+                                        placeholder="Add Amount to pay" required />
+                                    <label class="fieldset-label">Pin number</label>
+                                    <input id="Pin" type="text" class="input rounded-full"
+                                        placeholder="Enter 4 digit pin number" required />
+                                    <button id="pay-bill-btn" class="btn rounded-full bg-blue-700 text-white mt-4">Pay
+                                        Now</button>
+                                </fieldset>
+                            </form>
+                        </div>
                     </div>
-                </div>
-            </section>
-            <!-- Transactions Section  -->
-            <section id="transections-form" class="p-6">
-                <div class="flex justify-between items-center pb-6">
-                    <h3 class="font-bold text-2xl">Transections History</h3>
-                    <button class="btn">View All</button>
-                </div>
+                </section>
+                <!-- Transactions Section  -->
+                <section id="transections-form" class="p-6">
+                    <div class="flex justify-between items-center pb-6">
+                        <h3 class="font-bold text-2xl">Transections History</h3>
+                        <button class="btn">View All</button>
+                    </div>
 
-                <div class="space-y-5 px-6">
-                    <div class="cards flex justify-between items-center border rounded-md p-4 h-16">
-                        <div class="flex justify-start items-center gap-4">
-                            <img class="w-8 h-8" src="./Assest/Main Page/PayBill.png" alt="">
-                            <div>
-                                <h3 class="font-semibold text-lg">Electricity Bill</h3>
-                                <p>Today 01:44 AM</p>
+                    <div class="space-y-5 px-6">
+                        <div class="cards flex justify-between items-center border rounded-md p-4 h-16">
+                            <div class="flex justify-start items-center gap-4">
+                                <img class="w-8 h-8" src="./Assest/Main Page/PayBill.png" alt="">
+                                <div>
+                                    <h3 class="font-semibold text-lg">Electricity Bill</h3>
+                                    <p>Today 01:44 AM</p>
+                                </div>
                             </div>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>
-                    <div class="cards flex justify-between items-center border rounded-md p-4 h-16">
-                        <div class="flex justify-start items-center gap-4">
-                            <img class="w-8 h-8" src="./Assest/Main Page/PayBill.png" alt="">
-                            <div>
-                                <h3 class="font-semibold text-lg">Bank Deposit</h3>
-                                <p>Today 01:44 AM</p>
+                        <div class="cards flex justify-between items-center border rounded-md p-4 h-16">
+                            <div class="flex justify-start items-center gap-4">
+                                <img class="w-8 h-8" src="./Assest/Main Page/PayBill.png" alt="">
+                                <div>
+                                    <h3 class="font-semibold text-lg">Bank Deposit</h3>
+                                    <p>Today 01:44 AM</p>
+                                </div>
                             </div>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>
-                    <div class="cards flex justify-between items-center border rounded-md p-4 h-16">
-                        <div class="flex justify-start items-center gap-4">
-                            <img class="w-8 h-8" src="./Assest/Main Page/PayBill.png" alt="">
-                            <div>
-                                <h3 class="font-semibold text-lg">Mobile Recharge</h3>
-                                <p>Today 01:44 AM</p>
+                        <div class="cards flex justify-between items-center border rounded-md p-4 h-16">
+                            <div class="flex justify-start items-center gap-4">
+                                <img class="w-8 h-8" src="./Assest/Main Page/PayBill.png" alt="">
+                                <div>
+                                    <h3 class="font-semibold text-lg">Mobile Recharge</h3>
+                                    <p>Today 01:44 AM</p>
+                                </div>
                             </div>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>
-                    <div class="cards flex justify-between items-center border rounded-md p-4 h-16">
-                        <div class="flex justify-start items-center gap-4">
-                            <img class="w-8 h-8" src="./Assest/Main Page/PayBill.png" alt="">
-                            <div>
-                                <h3 class="font-semibold text-lg">Gas Bill</h3>
-                                <p>Today 01:44 AM</p>
+                        <div class="cards flex justify-between items-center border rounded-md p-4 h-16">
+                            <div class="flex justify-start items-center gap-4">
+                                <img class="w-8 h-8" src="./Assest/Main Page/PayBill.png" alt="">
+                                <div>
+                                    <h3 class="font-semibold text-lg">Gas Bill</h3>
+                                    <p>Today 01:44 AM</p>
+                                </div>
                             </div>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>
-                    <div class="cards flex justify-between items-center border rounded-md p-4 h-16">
-                        <div class="flex justify-start items-center gap-4">
-                            <img class="w-8 h-8" src="./Assest/Main Page/PayBill.png" alt="">
-                            <div>
-                                <h3 class="font-semibold text-lg">Gas Bill</h3>
-                                <p>Today 01:44 AM</p>
+                        <div class="cards flex justify-between items-center border rounded-md p-4 h-16">
+                            <div class="flex justify-start items-center gap-4">
+                                <img class="w-8 h-8" src="./Assest/Main Page/PayBill.png" alt="">
+                                <div>
+                                    <h3 class="font-semibold text-lg">Gas Bill</h3>
+                                    <p>Today 01:44 AM</p>
+                                </div>
                             </div>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>
-                    <div class="cards flex justify-between items-center border rounded-md p-4 h-16">
-                        <div class="flex justify-start items-center gap-4">
-                            <img class="w-8 h-8" src="./Assest/Main Page/PayBill.png" alt="">
-                            <div>
-                                <h3 class="font-semibold text-lg">Gas Bill</h3>
-                                <p>Today 01:44 AM</p>
+                        <div class="cards flex justify-between items-center border rounded-md p-4 h-16">
+                            <div class="flex justify-start items-center gap-4">
+                                <img class="w-8 h-8" src="./Assest/Main Page/PayBill.png" alt="">
+                                <div>
+                                    <h3 class="font-semibold text-lg">Gas Bill</h3>
+                                    <p>Today 01:44 AM</p>
+                                </div>
                             </div>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
-                </div>
-            </section>
+                </section>
         </section>
+        </div>
     </section>
     <script src="./script/addMoney.js"></script>
+    <script src="./script/cashout.js"></script>
+    <script src="./script/transferMoney.js"></script>
+    <script src="./script/getBonus.js"></script>
+    <script src="./script/payBill.js"></script>
     <script src="./script/toggle.js"></script>
 </body>
 

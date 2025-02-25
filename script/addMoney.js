@@ -1,4 +1,4 @@
-document.getElementById("add-money").addEventListener("click", function (event) {
+document.getElementById("add-money-btn").addEventListener("click", function (event) {
     event.preventDefault();
     const amount = document.getElementById("addAmount").value;
     const convertedAmount = parseInt(amount);
