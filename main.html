@@ -21,7 +21,7 @@
                 <img class="w-12" src="./Assest/Main Page/Head.png" alt="">
                 <div>
                     <h1 class="text-3xl font-bold ">$<span id="main-balance">4500</span></h1>
-                    <p class="border rounded-lg p-1">Available Balance</p>
+                    <p class="border rounded-md px-2">Available Balance</p>
                 </div>
             </div>
             <button id="logout-btn" class="btn bg-none text-black font-normal rounded-lg ">LogOut <i
@@ -29,8 +29,8 @@
         </nav>
         <main class="container mx-auto p-6">
             <div class="mt-10">
-                <h1>🔥 Welcome to Payooo!</h1>
-                <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+                <h1 class="font-bold text-2xl text-red-500">🔥 Welcome to Payooo!</h1>
+                <p class="font-semibold text-md ml-4">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
             </div>
             <!-- mini box container -->
             <div class="cards grid grid-cols-3 gap-2 p-3 mt-14">
@@ -190,7 +190,7 @@
                                     <input value="1234" id="Pin" type="text" class="input rounded-full"
                                         placeholder="Enter 4 digit pin number" required />
                                     <button id="transfer-money-btn"
-                                        class="btn rounded-full bg-blue-700 text-white mt-4">Withdraw
+                                        class="btn rounded-full bg-blue-700 text-white mt-4">Transfer
                                         Money</button>
                                 </fieldset>
                             </form>
@@ -205,7 +205,7 @@
                             <form class="card-body">
                                 <fieldset class="fieldset">
                                     <label class="fieldset-label">Enter Bonus Coupon Number</label>
-                                    <input id="bonus-coupon-number" type="text" class="input rounded-full"
+                                    <input value="12345" id="bonus-coupon-number" type="text" class="input rounded-full"
                                         placeholder="Enter your coupon" required />
                                     <button id="get-bonus-btn" class="btn rounded-full bg-blue-700 text-white mt-4">Get
                                         Bonus</button>
@@ -229,13 +229,13 @@
                                 </select>
                                 <fieldset class="fieldset">
                                     <label class="fieldset-label">Biller Account Number</label>
-                                    <input id="Account-Number" type="number" maxlength="11" class="input rounded-full"
+                                    <input value="01318181198" id="Account-Number" type="number" maxlength="11" class="input rounded-full"
                                         placeholder="Enter account number" required />
                                     <label class="fieldset-label">Amount to Pay</label>
-                                    <input id="payBillAmount" type="text" class="input rounded-full"
+                                    <input value="2000" id="payBillAmount" type="text" class="input rounded-full"
                                         placeholder="Add Amount to pay" required />
                                     <label class="fieldset-label">Pin number</label>
-                                    <input id="Pin" type="text" class="input rounded-full"
+                                    <input value="1234" id="Pin" type="text" class="input rounded-full"
                                         placeholder="Enter 4 digit pin number" required />
                                     <button id="pay-bill-btn" class="btn rounded-full bg-blue-700 text-white mt-4">Pay
                                         Now</button>
@@ -323,6 +323,7 @@
     <script src="./script/getBonus.js"></script>
     <script src="./script/payBill.js"></script>
     <script src="./script/toggle.js"></script>
+    <script src="./script/logout.js"></script>
 </body>
 
 </html>
