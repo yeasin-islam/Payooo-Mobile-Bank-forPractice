@@ -5,6 +5,7 @@ handleToggle("transfer-money-form", "none");
 handleToggle("get-bonus-form", "none");
 handleToggle("pay-bill-form", "none");
 handleToggle("transactions-box", "none");
+handleToggle("logout-form", "none");
 
 // document.getElementById("add-money-form").style.display = "none";
 // document.getElementById("cash-out-form").style.display = "none";
@@ -23,6 +24,7 @@ document.getElementById("add-money-box").addEventListener("click", function () {
     handleToggle("get-bonus-form", "none");
     handleToggle("pay-bill-form", "none");
     handleToggle("transactions-box", "none");
+    handleToggle("logout-form", "none");
 
     // document.getElementById("history-section").style.display = "none";
     // document.getElementById("add-money-form").style.display = "block";
@@ -42,6 +44,7 @@ document.getElementById("cash-out-box").addEventListener("click", function () {
     handleToggle("get-bonus-form", "none");
     handleToggle("pay-bill-form", "none");
     handleToggle("transactions-box", "none");
+    handleToggle("logout-form", "none");
 
     // document.getElementById("history-section").style.display = "none";
     // document.getElementById("add-money-form").style.display = "none";
@@ -55,12 +58,13 @@ document.getElementById("cash-out-box").addEventListener("click", function () {
 // for transfer-money-box
 document.getElementById("transfer-money-box").addEventListener("click", function () {
     handleToggle("history-section", "none");
-    handleToggle("add-money-form","none");
-    handleToggle("cash-out-form","none");
-    handleToggle("transfer-money-form","block");
-    handleToggle("get-bonus-form","none");
-    handleToggle("pay-bill-form","none");
-    handleToggle("transactions-box","none");
+    handleToggle("add-money-form", "none");
+    handleToggle("cash-out-form", "none");
+    handleToggle("transfer-money-form", "block");
+    handleToggle("get-bonus-form", "none");
+    handleToggle("pay-bill-form", "none");
+    handleToggle("transactions-box", "none");
+    handleToggle("logout-form", "none");
 
     // document.getElementById("history-section").style.display = "none";
     // document.getElementById("add-money-form").style.display = "none";
@@ -74,12 +78,13 @@ document.getElementById("transfer-money-box").addEventListener("click", function
 // for get-bonus-box
 document.getElementById("get-bonus-box").addEventListener("click", function () {
     handleToggle("history-section", "none");
-    handleToggle("add-money-form","none");
-    handleToggle("cash-out-form","none");
-    handleToggle("transfer-money-form","none");
-    handleToggle("get-bonus-form","block");
-    handleToggle("pay-bill-form","none");
-    handleToggle("transactions-box","none");
+    handleToggle("add-money-form", "none");
+    handleToggle("cash-out-form", "none");
+    handleToggle("transfer-money-form", "none");
+    handleToggle("get-bonus-form", "block");
+    handleToggle("pay-bill-form", "none");
+    handleToggle("transactions-box", "none");
+    handleToggle("logout-form", "none");
 
     // document.getElementById("history-section").style.display = "none";
     // document.getElementById("add-money-form").style.display = "none";
@@ -93,12 +98,13 @@ document.getElementById("get-bonus-box").addEventListener("click", function () {
 // for pay-bill-box
 document.getElementById("pay-bill-box").addEventListener("click", function () {
     handleToggle("history-section", "none");
-    handleToggle("add-money-form","none");
-    handleToggle("cash-out-form","none");
-    handleToggle("transfer-money-form","none");
-    handleToggle("get-bonus-form","none");
-    handleToggle("pay-bill-form","block");
-    handleToggle("transactions-box","none");
+    handleToggle("add-money-form", "none");
+    handleToggle("cash-out-form", "none");
+    handleToggle("transfer-money-form", "none");
+    handleToggle("get-bonus-form", "none");
+    handleToggle("pay-bill-form", "block");
+    handleToggle("transactions-box", "none");
+    handleToggle("logout-form", "none");
 
     // document.getElementById("history-section").style.display = "none";
     // document.getElementById("add-money-form").style.display = "none";
@@ -112,12 +118,13 @@ document.getElementById("pay-bill-box").addEventListener("click", function () {
 // for transactions-box
 document.getElementById("transactions-mini-box").addEventListener("click", function () {
     handleToggle("history-section", "none");
-    handleToggle("add-money-form","none");
-    handleToggle("cash-out-form","none");
-    handleToggle("transfer-money-form","none");
-    handleToggle("get-bonus-form","none");
-    handleToggle("pay-bill-form","none");
-    handleToggle("transactions-box","block");
+    handleToggle("add-money-form", "none");
+    handleToggle("cash-out-form", "none");
+    handleToggle("transfer-money-form", "none");
+    handleToggle("get-bonus-form", "none");
+    handleToggle("pay-bill-form", "none");
+    handleToggle("transactions-box", "block");
+    handleToggle("logout-form", "none");
 
     // document.getElementById("history-section").style.display = "none";
     // document.getElementById("add-money-form").style.display = "none";
@@ -127,4 +134,16 @@ document.getElementById("transactions-mini-box").addEventListener("click", funct
     // document.getElementById("pay-bill-form").style.display = "none";
     // document.getElementById("transactions-box").style.display = "block";
 
+})
+
+// for logout form 
+document.getElementById("logout-btn").addEventListener("click", function () {
+    handleToggle("history-section", "none");
+    handleToggle("add-money-form", "none");
+    handleToggle("cash-out-form", "none");
+    handleToggle("transfer-money-form", "none");
+    handleToggle("get-bonus-form", "none");
+    handleToggle("pay-bill-form", "none");
+    handleToggle("transactions-box", "none");
+    handleToggle("logout-form", "block");
 })

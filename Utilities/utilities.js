@@ -9,7 +9,7 @@ function getInputValueByID(id) {
 
 //Function for converted a inner text String to Float 
 function getInnerTextByID(id) {
-    const value = document.getElementById(id).value;
+    const value = document.getElementById(id).innerText;
     const convertedValue = parseFloat(value);
     return convertedValue;
 }
@@ -26,8 +26,13 @@ function handleToggle(id, status) {
 
 
 
+// Function to generate unique Transaction ID
 function generateTransactionID() {
-    const timestamp = Date.now(); // Current timestamp
-    const randomStr = Math.random().toString(36).substr(2, 5).toUpperCase(); // 5-character random string
-    return `TXN-${timestamp}-${randomStr}`;
+    return "TXN-" + Date.now() + "-" + Math.random().toString(36).substr(2, 5).toUpperCase();
+}
+
+// Get current date and time in a single formatted string
+function getCurrentDateTime() {
+    const now = new Date();
+    return now.toLocaleString(); // Format: MM/DD/YYYY, HH:MM AM/PM
 }
