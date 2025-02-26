@@ -3,11 +3,12 @@ document.getElementById("logout-form-main-btn").addEventListener("click",
         event.preventDefault();
         // window.location.href="./index.html"
 
-        const accountNumber = document.getElementById("Account-Number").value;
-        const pin = document.getElementById("Pin").value;
-        const convertedPin = parseInt(pin);
+        const accountNumber = document.getElementById("Logout-Account-Number").value;
+        const pin = getInputValueByID("logout-pin");
+        // const pin = document.getElementById("Pin").value;
+        // const convertedPin = parseInt(pin);
         if (accountNumber.length === 11) {
-            if (convertedPin === 12345) {
+            if (pin === 12345) {
                 window.location.href="./index.html"
                 // document.getElementById("hidden-form").style.display = "none";
             }

@@ -16,11 +16,11 @@
 
 <body class="bg-slate-800">
     <section class="max-w-md min-h-screen mx-auto bg-gray-200">
-        <nav class="flex justify-between items-center border-b-1 p-4">
-            <div class="flex justify-start">
-                <img class="w-12" src="./Assest/Main Page/Head.png" alt="">
+        <nav class="flex justify-between items-center border-b-2 px-6 pb-1 h-20">
+            <div class="flex justify-start items-center">
+                <img class="w-12 h-12" src="./Assest/Main Page/Head.png" alt="">
                 <div>
-                    <h1 class="text-3xl font-bold ">$<span id="main-balance">4500</span></h1>
+                    <h1 class="text-2xl font-bold ">$<span id="main-balance">4500</span></h1>
                     <p class="border rounded-md px-2">Available Balance</p>
                 </div>
             </div>
@@ -279,11 +279,11 @@
                         <form class="card-body">
                             <fieldset class="fieldset">
                                 <label class="fieldset-label">Account Number</label>
-                                <input value="01318181198" id="Account-Number" type="number" maxlength="11"
+                                <input value="01318181198" id="Logout-Account-Number" type="number" maxlength="11"
                                     class="input" placeholder="Enter Your Account Number" required />
                                 <label class="fieldset-label">PIN</label>
-                                <input value="12345" id="Pin" type="text" class="input" placeholder="Enter Your PIN"
-                                    required />
+                                <input value="12345" id="logout-pin" type="text" class="input"
+                                    placeholder="Enter Your PIN" required />
                                 <button id="logout-form-main-btn" class="btn bg-black text-white mt-4">Login</button>
                             </fieldset>
                         </form>
@@ -301,6 +301,7 @@
     <script src="./script/payBill.js"></script>
     <script src="./script/toggle.js"></script>
     <script src="./script/logout.js"></script>
+
 </body>
 
 </html>
